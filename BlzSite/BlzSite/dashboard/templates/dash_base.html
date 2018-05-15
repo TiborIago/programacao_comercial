@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Blz Delivery</title>
+  {% load static from staticfiles %}
+  <link type="text/css" href="{% static 'css/dash.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="{% url 'dash_home' %}">BLZ Delivery</a>
+    <div class=" navbar-collapse" id="">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link disabled" href="#">DÚVIDAS</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link disabled" href="#">CONTATO</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="site-body">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="panel-group" id="left-menu">
+          <div class="panel panel-default " >
+            <div class="panel-heading" >
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  <span data-feather="user"></span> Conta</a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse ">
+              <div class="panel-body">
+                <table class="table">
+                  <tr>
+                    <td>
+                      <a href="{% url 'user_changepassword' %}">Mudar senha</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="{% url 'user_changedata' %}">Alterar dados</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="{% url 'logout_user' %}">Sair</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#" class="text-danger"> Deletar conta</a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  <span data-feather="list"></span> Vendas</a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse ">
+              <div class="panel-body">
+                <table class="table">
+                  <tr>
+                    <td>
+                      <a href="{% url 'dash_servicos' %}"> Serviços </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="{% url 'dash_pedidos' %}"> Pedidos  </a><span class="label label-info"> 4 </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                     <a href="{% url 'dash_calendario' %}"> Calendario </a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                  <span data-feather="file-text"></span>
+                  </span> Relatorios</a>
+              </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse ">
+              <div class="panel-body">
+                <table class="table">
+                  <tr>
+                    <td>
+                      <a href="{% url 'dash_relatorios' %}">Vendas</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#">Avaliação</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#">Atendimentos</a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+  <script>
+    feather.replace()
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script>
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        datasets: [{
+          data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+          lineTension: 0,
+          backgroundColor: 'transparent',
+          borderColor: '#007bff',
+          borderWidth: 4,
+          pointBackgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: false
+            }
+          }]
+        },
+        legend: {
+          display: false,
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+{% extends 'dash_base.html' %} 
+{% block body %}
+        
+<div >
+            <h2>Agenda</h2>
+                <p class="lead">
+                    Agenda de serviços a serem atendidos
+                </p>
+
+                <hr>
+            
+                <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Horario</th>
+                                    <th>Atendimento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Single event in a single day -->
+                                <tr>
+                                    <td>
+                                        <div class="dayofmonth">26</div>
+                                        <div class="dayofweek">Sabado</div>
+                                        <div class="shortdate text-muted">julho, 2018</div>
+                                    </td>
+                                    <td class="">
+                                        5:30 AM
+                                    </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event">
+                                            <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i> 
+                                            Massagem
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                               
+                                <tr>
+                                    <td class="agenda-date" class="active" rowspan="3">
+                                        <div class="dayofmonth">27</div>
+                                        <div class="dayofweek">Domingo</div>
+                                        <div class="shortdate text-muted">julho, 2018</div>
+                                    </td>
+                                    <td class="agenda-time">
+                                        8:00 - 9:00 AM 
+                                    </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event">
+                                            Massagem
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="agenda-time">
+                                        10:15 AM - 12:00 PM 
+                                    </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event">
+                                            Massagem
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="agenda-time">
+                                        7:00 - 9:00 PM
+                                    </td>
+                                    <td class="agenda-events">
+                                        <div class="agenda-event">
+                                            Massagem
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+{% endblock %}

@@ -6,7 +6,7 @@
 <div class="container">
     <h1>Logar no sistema</h1>
 
-    <form action="{% url 'logar' %}" method="POST" class="needs-validation">
+    <form action="{% url 'dash_login' %}" method="POST" class="needs-validation">
         {% csrf_token %} 
         
         {% if form.errors %}

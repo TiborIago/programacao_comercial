@@ -1,0 +1,36 @@
+{% extends 'dash_base.html' %} 
+{% block body %}
+
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+  <h1 >Lista de servicos</h1>
+
+  {% for d in data %}
+  <div id="card-pedidos">
+    <div class="card" >
+      <div class="card-header">
+        {{d.descricao}}
+      </div>
+      <div class="card-body">
+        <p class="font-weight-bold">Preço : </p>
+        <p class="card-text">R$ {{d.preco}}</p>
+        
+        <p class="font-weight-bold">Tipo: </p>
+        <p class="card-text">{{ d.tipo }}</p>
+        
+
+      </div>
+    </div>
+  </div>
+  
+  {% endfor %}
+
+</main>
+
+<style>
+  #card-pedidos{
+    padding-top: 15px;
+   
+  }
+</style>
+{% endblock %}

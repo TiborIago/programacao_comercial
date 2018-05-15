@@ -34,7 +34,7 @@ class LogarBLZ(forms.Form):
     
     usuario = forms.CharField(required=True)
     senha = forms.CharField(required=True)
-
+    
     def is_valid(self):
         valid = True
 

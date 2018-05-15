@@ -1,8 +1,6 @@
 {% extends "home_base.html" %}
 {% block body %}
-<h1>
-  Home
-</h1>
+{% load static from staticfiles %}
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -18,7 +16,7 @@
               <h1>Salão de beleza na palma da mão</h1>
               <p>Pelo nosso App, você pode pedir serviços em poucos toques e ser atendido onde e quando quiser. Sem trânsito e sem espera.</p>
               <a href="default.asp">
-                  <img src="icone.PNG" alt="HTML tutorial" style="width:220px;height:150px;border:0;">
+                  <img src="{% static 'img/icone.PNG ' %}" alt="HTML tutorial" style="width:220px;height:150px;border:0;">
                 </a>
             </div>
           </div>

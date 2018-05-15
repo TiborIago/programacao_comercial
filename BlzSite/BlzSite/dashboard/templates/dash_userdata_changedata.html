@@ -1,0 +1,32 @@
+{% extends 'dash_base.html' %} 
+{% block body %}
+
+
+<div class="">
+
+    <h3>Seus dados</h3>
+
+    <ul class="list-group">
+            <li class="list-group-item active " id="li-lista-dados">Nome completo :</li>
+            <li class="list-group-item">{{ nome }}</li>
+    </ul>
+
+    <ul class="list-group">
+            <li class="list-group-item active "  id="li-lista-dados">Nome do usuário :</li>
+            <li class="list-group-item">{{ username }}</li>
+    </ul>
+
+    <ul class="list-group">
+            <li class="list-group-item active "  id="li-lista-dados">Email :</li>
+            <li class="list-group-item">{{ email }}</li>
+    </ul>
+
+    <ul class="list-group">
+            <li class="list-group-item active "  id="li-lista-dados">Telefone :</li>
+            <li class="list-group-item">{{ telefone }}</li>
+    </ul>
+
+</div>
+     
+
+{% endblock %}
